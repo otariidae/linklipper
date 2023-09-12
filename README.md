@@ -2,6 +2,8 @@
 
 Chrome extension to copy the link text to your clipboard
 
+![screenshot](screenshot.png)
+
 ## Installation
 
 1. Run `deno task build`
