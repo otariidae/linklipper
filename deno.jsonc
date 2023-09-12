@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno bundle --watch popup.ts dist/popup.js",
+    "build": "deno bundle popup.ts dist/popup.js"
+  },
+  "compilerOptions": {
+    "lib": [
+      "deno.ns",
+      "dom"
+    ]
+  }
+}

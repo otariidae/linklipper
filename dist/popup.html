@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .link-text-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .lang {
+            margin: 0;
+        }
+
+        .copy-to-clipboard {
+            appearance: none;
+            padding: 0.25rem;
+            border-style: none;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            transition: background-color ease-in-out 0.2s;
+        }
+
+        .octicon-check {
+            display: none;
+        }
+
+        .copied .octicon-copy {
+            display: none;
+        }
+
+        .copied .octicon-check {
+            display: initial;
+        }
+
+        .copy-to-clipboard:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .code-container {
+            inline-size: 20rem;
+            margin-block: 0.25rem 0.5rem;
+            text-wrap: wrap;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+<body>
+    <div class="link-text-container">
+        <div class="link-text-header">
+            <p class="lang">scrapbox</p>
+            <button type="button" class="copy-to-clipboard">
+                <img src="copy.svg" class="octicon-copy" width="16" height="16" alt="clip to copy">
+                <img src="check.svg" class="octicon-check" width="16" height="16" alt="copied">
+            </button>
+        </div>
+        <pre class="code-container"><code id="scrapbox-code"></code></pre>
+    </div>
+    <div class="link-text-container">
+        <div class="link-text-header">
+            <p class="lang">markdown</p>
+            <button type="button" class="copy-to-clipboard">
+                <img src="copy.svg" class="octicon-copy" width="16" height="16" alt="clip to copy">
+                <img src="check.svg" class="octicon-check" width="16" height="16" alt="copied">
+            </button>
+        </div>
+        <pre class="code-container"><code id="markdown-code"></code></pre>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
