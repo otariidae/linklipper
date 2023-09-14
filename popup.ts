@@ -1,6 +1,6 @@
 import browser from "https://esm.sh/webextension-polyfill@0.10.0";
 
-function generateScrapboxLinkText(url: string, title: string) {
+function generateMediaWikiOrScrapboxLinkText(url: string, title: string) {
   return `[${url} ${title}]`;
 }
 
@@ -35,9 +35,11 @@ async function main() {
     btn.addEventListener("click", onCopyButtonClick);
   }
 
-  const scrapboxCode = document.getElementById("scrapbox-code");
+  const mediaWikiScrapboxCode = document.getElementById(
+    "mediawiki-scrapbox-code",
+  );
   const markdownCode = document.getElementById("markdown-code");
-  if (scrapboxCode === null || markdownCode === null) {
+  if (mediaWikiScrapboxCode === null || markdownCode === null) {
     return;
   }
 
@@ -49,7 +51,7 @@ async function main() {
   if (currentTab.url === undefined || currentTab.title === undefined) {
     return;
   }
-  scrapboxCode.textContent = generateScrapboxLinkText(
+  mediaWikiScrapboxCode.textContent = generateMediaWikiOrScrapboxLinkText(
     currentTab.url,
     currentTab.title,
   );

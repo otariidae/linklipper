@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Linklipper",
   "version": "0.1.0",
-  "description": "Copy the link text to your clipboard. Supports Markdown and Scrapbox style link text.",
+  "description": "Copy the link text to your clipboard. Supports Markdown, MediaWiki, and Scrapbox style link text.",
   "permissions": ["activeTab"],
   "action": {
     "default_popup": "popup.html"
