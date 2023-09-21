@@ -38,3 +38,6 @@ jobs:
 
       - name: Run tests
         run: deno test -A --allow-none
+
+      - name: Check build
+        run: deno task build
