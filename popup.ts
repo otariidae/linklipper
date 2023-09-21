@@ -15,7 +15,7 @@ async function onCopyButtonClick(e: Event) {
   const container = target.closest(".link-text-container");
   assert(container !== null);
   const code = container.getElementsByTagName("code")[0];
-  assert(code !== null);
+  assert(code !== undefined);
   const codeText = code.textContent;
   assert(codeText !== null); // textContent must not be null when `code` is HTMLElement as described in the DOM spec
   await navigator.clipboard.writeText(codeText);
@@ -40,6 +40,7 @@ async function main() {
     lastFocusedWindow: true,
   });
   const currentTab = tabs[0];
+  assert(currentTab !== undefined);
   assert(currentTab.url !== undefined); // url must be present if having activeTab permission
   assert(currentTab.title !== undefined); // title must be present if having activeTab permission
   mediaWikiScrapboxCode.textContent = generateMediaWikiOrScrapboxLinkText(
