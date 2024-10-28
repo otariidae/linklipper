@@ -1,7 +1,6 @@
 {
   "tasks": {
-    "dev": "deno bundle --watch popup.ts dist/popup.js",
-    "build": "deno bundle popup.ts dist/popup.js"
+    "build": "deno run --allow-read --allow-write --allow-env --allow-run build.ts"
   },
   "compilerOptions": {
     "lib": [
@@ -9,5 +8,10 @@
       "dom"
     ],
     "noUncheckedIndexedAccess": true
+  },
+  "imports": {
+    // TODO: prefer npm:webextension-polyfill but looks like type definitions are not loaded
+    "webextension-polyfill": "https://esm.sh/webextension-polyfill@0.10.0",
+    "assert": "jsr:@std/assert"
   }
 }
