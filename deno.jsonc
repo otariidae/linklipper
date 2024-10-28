@@ -8,5 +8,9 @@
       "dom"
     ],
     "noUncheckedIndexedAccess": true
+  },
+  "imports": {
+    "webextension-polyfill": "https://esm.sh/webextension-polyfill@0.10.0",
+    "assert": "https://deno.land/std@0.201.0/assert/assert.ts"
   }
 }

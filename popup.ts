@@ -1,5 +1,5 @@
-import browser from "https://esm.sh/webextension-polyfill@0.10.0";
-import { assert } from "https://deno.land/std@0.201.0/assert/assert.ts";
+import browser from "webextension-polyfill";
+import { assert } from "assert";
 
 function generateMediaWikiOrScrapboxLinkText(url: string, title: string) {
   return `[${url} ${title}]`;
