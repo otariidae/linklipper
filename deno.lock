@@ -135,5 +135,10 @@
         "@esbuild/win32-x64"
       ]
     }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@*"
+    ]
   }
 }

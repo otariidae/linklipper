@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "deno run --allow-read --allow-env --allow-run build.ts"
+    "build": "deno run --allow-read --allow-write --allow-env --allow-run build.ts"
   },
   "compilerOptions": {
     "lib": [
@@ -10,7 +10,8 @@
     "noUncheckedIndexedAccess": true
   },
   "imports": {
+    // TODO: prefer npm:webextension-polyfill but looks like type definitions are not loaded
     "webextension-polyfill": "https://esm.sh/webextension-polyfill@0.10.0",
-    "assert": "https://deno.land/std@0.201.0/assert/assert.ts"
+    "assert": "jsr:@std/assert"
   }
 }
