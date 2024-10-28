@@ -1,7 +1,6 @@
 {
   "tasks": {
-    "dev": "deno bundle --watch popup.ts dist/popup.js",
-    "build": "deno bundle popup.ts dist/popup.js"
+    "build": "deno run --allow-read --allow-env build.ts"
   },
   "compilerOptions": {
     "lib": [
